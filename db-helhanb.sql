@@ -87,8 +87,19 @@ create table reservations(
     FOREIGN KEY (renter) REFERENCES users(user_id)
 ) ;
 
-/* TODO
-- Messages and conversation
-*/
+create table messages(
+    message_id int identity not null,
+    sender_id int not null,
+    content varchar(500) not null,
 
+    PRIMARY KEY(message_id),
+    FOREIGN KEY (sender_id) REFERENCES users(user_id)
+) ;
 
+create table conversation(
+   conversation_id int identity not null,
+   id_user_1 int not null,
+   id_user_2 int not null,
+
+    PRIMARY KEY (conversation_id) 
+) ;
