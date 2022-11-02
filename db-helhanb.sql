@@ -90,7 +90,8 @@ create table reservations(
 create table messages(
     message_id int identity not null,
     sender_id int not null,
-    content varchar(500) not null,
+    content varchar(500)not null,
+    view boolean not null,
 
     PRIMARY KEY(message_id),
     FOREIGN KEY (sender_id) REFERENCES users(user_id)
