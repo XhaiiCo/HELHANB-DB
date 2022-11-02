@@ -20,7 +20,7 @@ create table users
     user_id int identity not null,
     first_name varchar(255) not null,
     last_name varchar(255) not null,
-    accout_creation datetime not null,
+    account_creation datetime not null,
     email varchar(255) not null,
     password varchar(255) not null,
     birth_date date not null,
@@ -91,7 +91,7 @@ create table messages(
     message_id int identity not null,
     sender_id int not null,
     content varchar(500)not null,
-    view boolean not null,
+    vieww bit not null,
 
     PRIMARY KEY(message_id),
     FOREIGN KEY (sender_id) REFERENCES users(user_id)
