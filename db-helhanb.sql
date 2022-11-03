@@ -23,7 +23,7 @@ create table users
     account_creation datetime not null,
     email varchar(255) not null,
     password varchar(255) not null,
-    birth_date date not null,
+    --birth_date date not null,
 
     role_id int not null,
 
@@ -91,7 +91,7 @@ create table messages(
     message_id int identity not null,
     sender_id int not null,
     content varchar(500)not null,
-    vieww bit not null,
+    view_message bit not null,
 
     PRIMARY KEY(message_id),
     FOREIGN KEY (sender_id) REFERENCES users(user_id)
