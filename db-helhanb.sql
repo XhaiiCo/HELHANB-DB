@@ -23,6 +23,7 @@ create table users
     account_creation datetime not null,
     email varchar(255) not null,
     password varchar(255) not null,
+    profile_picture_path varchar(500),
     --birth_date date not null,
 
     role_id int not null,
