@@ -75,8 +75,8 @@ insert into reservation_status values
 create table reservations(
     reservation_id int identity not null,
     reservation_creation datetime not null,
-    arrival_date date not null,
-    leave_date date not null,
+    arrival_date datetime not null,
+    leave_date datetime not null,
 
     reservation_status_id int not null,
     ad_id int not null,
