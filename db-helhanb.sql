@@ -53,6 +53,9 @@ create table ads
     postal_code int not null,
     country varchar(255) not null,
     city varchar(255) not null,
+    arrival_time_range_start time not null,
+    arrival_time_range_end time not null,
+    leave_time time not null,
 
     user_id int not null,
 
@@ -93,6 +96,7 @@ create table messages(
     sender_id int not null,
     content varchar(500)not null,
     view_message bit not null,
+    send_time datetime not null,
 
     PRIMARY KEY(message_id),
     FOREIGN KEY (sender_id) REFERENCES users(user_id)
