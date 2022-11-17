@@ -24,7 +24,6 @@ create table users
     email varchar(255) not null,
     password varchar(255) not null,
     profile_picture_path varchar(500),
-    --birth_date date not null,
 
     role_id int not null,
 
@@ -39,6 +38,19 @@ create table pictures
 
     PRIMARY KEY(picture_id)
 ) ;
+
+create table ad_status
+(
+    ad_status_id int not null,
+    status_name varchar(255) not null,
+
+    PRIMARY KEY(ad_status_id)
+) ;
+
+insert into ad_status values
+(1, 'en attente'),
+(2, 'refusée'),
+(3, 'acceptée') ;
 
 create table ads
 (
@@ -55,9 +67,11 @@ create table ads
     city varchar(255) not null,
 
     user_id int not null,
+    ad_status_id int not null,
 
-    PRIMARY KEY(ad_id) ,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    PRIMARY KEY(ad_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
 ) ;
 
 create table reservation_status(
