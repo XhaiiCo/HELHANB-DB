@@ -24,13 +24,18 @@ create table users
     email varchar(255) not null,
     password varchar(255) not null,
     profile_picture_path varchar(500),
-    --birth_date date not null,
 
     role_id int not null,
 
     PRIMARY KEY(user_id),
     FOREIGN KEY (role_id) REFERENCES roles(role_id)
 ) ;
+
+insert into users(first_name, last_name, account_creation, email, password, profile_picture_path, role_id) values
+('user', 'user', '01/01/2022', 'user@user.be', 'useruser', null, 1),
+('hote', 'hote', '01/01/2022', 'hote@hote.be', 'hotehote', null, 2),
+('admin', 'admin', '01/01/2022', 'admin@admin.be', 'adminadmin', null, 3) ;
+
 
 create table pictures
 (
@@ -39,6 +44,19 @@ create table pictures
 
     PRIMARY KEY(picture_id)
 ) ;
+
+create table ad_status
+(
+    ad_status_id int not null,
+    status_name varchar(255) not null,
+
+    PRIMARY KEY(ad_status_id)
+) ;
+
+insert into ad_status values
+(1, 'en attente'),
+(2, 'refusée'),
+(3, 'acceptée') ;
 
 create table ads
 (
@@ -58,9 +76,11 @@ create table ads
     leave_time time not null,
 
     user_id int not null,
+    ad_status_id int not null,
 
-    PRIMARY KEY(ad_id) ,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    PRIMARY KEY(ad_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
 ) ;
 
 create table reservation_status(
@@ -78,8 +98,8 @@ insert into reservation_status values
 create table reservations(
     reservation_id int identity not null,
     reservation_creation datetime not null,
-    arrival_date date not null,
-    leave_date date not null,
+    arrival_date datetime not null,
+    leave_date datetime not null,
 
     reservation_status_id int not null,
     ad_id int not null,
