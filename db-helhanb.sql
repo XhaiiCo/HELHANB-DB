@@ -74,7 +74,7 @@ create table ads
     FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
 ) ;
 
-create table ad_picture(
+create table ad_pictures(
     picture_id int identity not null, 
     path varchar(255), 
 
