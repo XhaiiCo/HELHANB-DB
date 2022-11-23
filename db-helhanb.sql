@@ -76,7 +76,7 @@ create table ads
 
 create table ad_pictures(
     picture_id int identity not null, 
-    path varchar(255), 
+    path varchar(255) not null, 
 
     ad_id int not null,
 
@@ -86,7 +86,7 @@ create table ad_pictures(
 
 create table house_features(
     house_feature_id int identity not null, 
-    feature varchar(255), 
+    feature varchar(255) not null, 
 
     ad_id int not null,
 
