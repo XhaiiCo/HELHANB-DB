@@ -63,7 +63,7 @@ create table ads
     ad_id int identity not null,
     ad_name varchar(255) not null,
     ad_created datetime not null,
-    price_per_night float not null,
+    price_per_night real not null,
     description varchar(500) not null,
     number_of_persons int not null,
     number_of_bedrooms int not null,
@@ -82,6 +82,26 @@ create table ads
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
 ) ;
+
+create table ad_picture(
+    picture_id int identity not null, 
+    path varchar(255), 
+
+    ad_id int not null,
+
+    PRIMARY KEY(picture_id),
+    FOREIGN KEY (ad_id) REFERENCES ads(ad_id)
+)
+
+create table house_features(
+    house_feature_id int identity not null, 
+    feature varchar(255), 
+
+    ad_id int not null,
+
+    PRIMARY KEY(house_feature_id),
+    FOREIGN KEY (ad_id) REFERENCES ads(ad_id)
+)
 
 create table reservation_status(
     reservation_status_id int not null,
