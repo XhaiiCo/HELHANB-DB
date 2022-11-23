@@ -36,15 +36,6 @@ insert into users(first_name, last_name, account_creation, email, password, prof
 ('hote', 'hote', '01/01/2022', 'hote@hote.be', '$2a$12$clF/xBaPeBBgPppBE8/.YOTzGJl/ON8PXI.jsrtKvmlP/2zs/ZLgm', null, 2),--pwd: hotehote
 ('admin', 'admin', '01/01/2022', 'admin@admin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', null, 3) ;--pwd: adminadmin
 
-
-create table pictures
-(
-    picture_id int identity not null,
-    path varchar(255) not null,
-
-    PRIMARY KEY(picture_id)
-) ;
-
 create table ad_status
 (
     ad_status_id int not null,
