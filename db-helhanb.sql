@@ -32,9 +32,9 @@ create table users
 ) ;
 
 insert into users(first_name, last_name, account_creation, email, password, profile_picture_path, role_id) values
-('user', 'user', '01/01/2022', 'user@user.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', null, 1),--pwd: useruser
-('hote', 'hote', '01/01/2022', 'hote@hote.be', '$2a$12$clF/xBaPeBBgPppBE8/.YOTzGJl/ON8PXI.jsrtKvmlP/2zs/ZLgm', null, 2),--pwd: hotehote
-('admin', 'admin', '01/01/2022', 'admin@admin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', null, 3) ;--pwd: adminadmin
+('user', 'user', '01/01/2022', 'user@user.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('hote', 'hote', '01/01/2022', 'hote@hote.be', '$2a$12$clF/xBaPeBBgPppBE8/.YOTzGJl/ON8PXI.jsrtKvmlP/2zs/ZLgm', '\Upload\ProfilePicture\default_user_pic.png', 2),--pwd: hotehote
+('admin', 'admin', '01/01/2022', 'admin@admin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', '\Upload\ProfilePicture\default_user_pic.png', 3) ;--pwd: adminadmin
 
 create table ad_status
 (
