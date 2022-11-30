@@ -122,6 +122,14 @@ create table reservations(
     FOREIGN KEY (renter) REFERENCES users(user_id)
 ) ;
 
+create table conversations(
+   conversation_id int identity not null,
+   id_user_1 int not null,
+   id_user_2 int not null,
+
+    PRIMARY KEY (conversation_id) 
+) ;
+
 create table messages(
     message_id int identity not null,
     sender_id int not null,
@@ -129,14 +137,9 @@ create table messages(
     view_message bit not null,
     send_time datetime not null,
 
+    conversation_id int not null,
+
     PRIMARY KEY(message_id),
-    FOREIGN KEY (sender_id) REFERENCES users(user_id)
-) ;
-
-create table conversation(
-   conversation_id int identity not null,
-   id_user_1 int not null,
-   id_user_2 int not null,
-
-    PRIMARY KEY (conversation_id) 
+    FOREIGN KEY (sender_id) REFERENCES users(user_id),
+    FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id)
 ) ;
