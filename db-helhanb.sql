@@ -70,7 +70,7 @@ create table ads
     ad_status_id int not null,
 
     PRIMARY KEY(ad_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
 ) ;
 
@@ -81,7 +81,7 @@ create table ad_pictures(
     ad_id int not null,
 
     PRIMARY KEY(picture_id),
-    FOREIGN KEY (ad_id) REFERENCES ads(ad_id)
+    FOREIGN KEY (ad_id) REFERENCES ads(ad_id) ON DELETE CASCADE
 )
 
 create table house_features(
@@ -91,7 +91,7 @@ create table house_features(
     ad_id int not null,
 
     PRIMARY KEY(house_feature_id),
-    FOREIGN KEY (ad_id) REFERENCES ads(ad_id)
+    FOREIGN KEY (ad_id) REFERENCES ads(ad_id) ON DELETE CASCADE
 )
 
 create table reservation_status(
@@ -118,22 +118,24 @@ create table reservations(
     
     PRIMARY KEY(reservation_id),
     FOREIGN KEY (reservation_status_id) REFERENCES reservation_status(reservation_status_id),
-    FOREIGN KEY (ad_id) REFERENCES ads(ad_id),
+    FOREIGN KEY (ad_id) REFERENCES ads(ad_id) ON DELETE CASCADE,
     FOREIGN KEY (renter) REFERENCES users(user_id)
 ) ;
 
 create table conversations(
-   conversation_id int identity not null,
-   id_user_1 int not null,
-   id_user_2 int not null,
+    conversation_id int identity not null,
+    id_user_1 int not null,
+    id_user_2 int not null,
 
-    PRIMARY KEY (conversation_id) 
+    PRIMARY KEY (conversation_id),
+    FOREIGN KEY (id_user_1) REFERENCES users(user_id), 
+    FOREIGN KEY (id_user_2) REFERENCES users(user_id)
 ) ;
 
 create table messages(
     message_id int identity not null,
     sender_id int not null,
-    content varchar(500)not null,
+    content varchar(500) not null,
     view_message bit not null,
     send_time datetime not null,
 
@@ -141,5 +143,15 @@ create table messages(
 
     PRIMARY KEY(message_id),
     FOREIGN KEY (sender_id) REFERENCES users(user_id),
-    FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id)
+    FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id) ON DELETE CASCADE
 ) ;
+
+--Put after
+CREATE TRIGGER [DELETE_USER]
+   ON users
+   INSTEAD OF DELETE
+AS 
+BEGIN
+ DELETE FROM conversations WHERE id_user_1 IN (SELECT user_id FROM DELETED) or id_user_2 IN (SELECT user_id FROM DELETED)
+ DELETE FROM users WHERE user_id IN (SELECT user_id from DELETED) 
+END
