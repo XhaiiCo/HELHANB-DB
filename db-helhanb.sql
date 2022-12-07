@@ -69,9 +69,13 @@ create table ads
     user_id int not null,
     ad_status_id int not null,
 
+    ad_slug varchar(255) not null,   
+   
     PRIMARY KEY(ad_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-    FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id)
+    FOREIGN KEY (ad_status_id) REFERENCES ad_status(ad_status_id),
+    CONSTRAINT AK_AdSlug UNIQUE(ad_slug)
+
 ) ;
 
 create table ad_pictures(
