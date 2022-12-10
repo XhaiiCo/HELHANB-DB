@@ -23,27 +23,27 @@ optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue fac
 ('Annonce 6', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-6-454226465'),
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-6-454226465'),
 ('Annonce 7', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-7-462242266'),
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-7-462242266'),
 ('Annonce 8', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-8-565656556'),
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-8-565656556'),
 ('Annonce 9', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-9-426526876'),
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-9-426526876'),
 ('Annonce 10', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-10-652435655'),
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-10-652435655'),
 ('Annonce 11', GETDATE(), 100.00, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Mons', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-11-456544466');
+optio, eaque rerum! Provident similique accusantium nemo autem.', 5, 4, 'rue factice', 7000, 'Belgique', 'Baudour', '17:00:00', '19:00:00', '08:00:00', 2, 3, 'annonce-11-456544466');
 
 insert into ad_pictures(path, ad_id) values 
 ('\Upload\AdPictures\Test\2_1_1.webp', 1),
