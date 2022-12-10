@@ -125,3 +125,10 @@ insert into house_features(feature, ad_id) values
 ('douche', 11),
 ('cinéma', 11),
 ('jacuzzi', 11);
+
+
+SET DATEFORMAT ymd; -- car bug pour insert des datetimes
+insert into reservations values 
+('2022-11-09 00:00:00', '2022-12-04 10:00:00', '2022-12-10 17:00:00', 1, 1, 1),
+('2022-11-10 00:00:00', '2022-12-10 10:00:00', '2022-12-15 17:00:00', 1, 1, 1),
+('2022-11-11 00:00:00', '2022-12-09 10:00:00', '2022-12-12 17:00:00', 1, 1, 1);
