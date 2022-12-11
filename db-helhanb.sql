@@ -49,7 +49,8 @@ create table ad_status
 insert into ad_status values
 (1, 'en attente'),
 (2, 'refusée'),
-(3, 'acceptée') ;
+(3, 'acceptée'), 
+(4, 'supprimée') ;
 
 create table ads
 (
@@ -152,7 +153,7 @@ create table messages(
     FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id) ON DELETE CASCADE
 ) ;
 
---Put after
+--to be added separately after the db otherwise there is an error
 CREATE TRIGGER [DELETE_USER]
    ON users
    INSTEAD OF DELETE
