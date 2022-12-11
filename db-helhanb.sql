@@ -50,7 +50,7 @@ insert into ad_status values
 (1, 'en attente'),
 (2, 'refusée'),
 (3, 'acceptée'), 
-(4, 'supprimée') ;
+(4, 'désactivée') ;
 
 create table ads
 (
