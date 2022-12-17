@@ -36,7 +36,20 @@ insert into users(first_name, last_name, account_creation, email, password, prof
 ('user', 'user', '01/01/2022', 'user@user.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
 ('hote', 'hote', '01/01/2022', 'hote@hote.be', '$2a$12$clF/xBaPeBBgPppBE8/.YOTzGJl/ON8PXI.jsrtKvmlP/2zs/ZLgm', '\Upload\ProfilePicture\default_user_pic.png', 2),--pwd: hotehote
 ('admin', 'admin', '01/01/2022', 'admin@admin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', '\Upload\ProfilePicture\default_user_pic.png', 3) ,--pwd: adminadmin
-('superadmin', 'superadmin', '01/01/2022', 'superadmin@superadmin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', '\Upload\ProfilePicture\default_user_pic.png', 4) ;--pwd: adminadmin
+('superadmin', 'superadmin', '01/01/2022', 'superadmin@superadmin.be', '$2a$12$O99mUTmMr7yMpyBuwxyCx.0CkFDyZMiChJuvDZDE22pAHxvoVzn2u', '\Upload\ProfilePicture\default_user_pic.png', 4),
+('user2', 'user2', '01/01/2022', 'user2@user2.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user3', 'user3', '01/01/2022', 'user3@user3.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user4', 'user4', '01/01/2022', 'user4@user4.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user5', 'user5', '01/01/2022', 'user5@user5.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user6', 'user6', '01/01/2022', 'user6@user6.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user7', 'user7', '01/01/2022', 'user7@user7.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user8', 'user8', '01/01/2022', 'user8@user8.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user9', 'user9', '01/01/2022', 'user9@user9.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user10', 'user10', '01/01/2022', 'user10@user10.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user11', 'user11', '01/01/2022', 'user11@user11.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1),--pwd: useruser
+('user12', 'user12', '01/01/2022', 'user12@user12.be', '$2a$12$j1/Y91L4K/.MNXxKGak2G.jnflWmXCong30Ur2YIlKNN/F8YMxCpq', '\Upload\ProfilePicture\default_user_pic.png', 1);--pwd: useruser
+
+
 
 create table ad_status
 (
