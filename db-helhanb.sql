@@ -160,5 +160,6 @@ CREATE TRIGGER [DELETE_USER]
 AS 
 BEGIN
  DELETE FROM conversations WHERE id_user_1 IN (SELECT user_id FROM DELETED) or id_user_2 IN (SELECT user_id FROM DELETED)
+ DELETE FROM reservations WHERE renter IN (SELECT user_id FROM DELETED) 
  DELETE FROM users WHERE user_id IN (SELECT user_id from DELETED) 
 END
