@@ -1,1 +1,1 @@
-The "Test" folder containing the images linked to the mock data, is to be put in the api in the directory: wwroot\Upload\AdPictures
+The "Test" folder containing the images linked to the mock data. It has to be put in the api, in the api project in the directory: wwwroot\Upload\AdPictures
