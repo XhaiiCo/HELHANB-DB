@@ -1,0 +1,1 @@
+The "Test" folder containing the images linked to the mock data, is to be put in the api in the directory: wwroot\Upload\AdPictures
