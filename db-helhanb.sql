@@ -154,7 +154,7 @@ create table messages(
 CREATE TRIGGER [DELETE_USER]
    ON users
    INSTEAD OF DELETE
-AS 
+AS
 BEGIN
  DELETE FROM conversations WHERE id_user_1 IN (SELECT user_id FROM DELETED) or id_user_2 IN (SELECT user_id FROM DELETED)
  DELETE FROM reservations WHERE renter IN (SELECT user_id FROM DELETED) 
